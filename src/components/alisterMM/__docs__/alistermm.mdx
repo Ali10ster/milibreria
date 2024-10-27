@@ -1,0 +1,29 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./example.tsx";
+import * as AlisterMM from "./alistermm.stories.tsx";
+
+<Meta of={AlisterMM} title="AlisterMM" />
+
+# AlisterMM
+
+Componente de calificación
+
+#### Example
+
+<Canvas of={AlisterMM.Primary} />
+
+## Usage
+
+```ts
+import { AlisterMM } from 'milibreria';
+
+function Example() {
+    return (
+        <AlisterMM
+            ratingValue={4}
+            onRatingChange={(newRating) => console.log("Nuevo rating:", newRating)}
+        />
+    );
+};
+
+export default Example;
