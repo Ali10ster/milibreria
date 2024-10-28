@@ -1,29 +1,50 @@
 import { Canvas, Meta } from "@storybook/blocks";
-import Example from "./example.tsx";
+import example from "./example.tsx";
 import * as AlisterMM from "./alistermm.stories.tsx";
 
 <Meta of={AlisterMM} title="AlisterMM" />
 
-# AlisterMM
+# AlisterMM Componente de tipografía
 
-Componente de calificación
-
-#### Example
+#### Ejemplo
 
 <Canvas of={AlisterMM.Primary} />
 
-## Usage
+## Uso
 
 ```ts
 import { AlisterMM } from 'milibreria';
 
-function Example() {
+function Example(){
     return (
         <AlisterMM
-            ratingValue={4}
-            onRatingChange={(newRating) => console.log("Nuevo rating:", newRating)}
+            text="Componente AlisterMM primario",
+            alignment="center",
+            color="succes",
+            bottomMargin= true,
+            variant="h1",
         />
     );
 };
 
 export default Example;
+
+<Canvas of={AlisterMM.Primary} />
+
+## Uso
+
+```ts
+import { AlisterMM } from 'milibreria';
+
+function Example(){
+    return (
+        <AlisterMM
+            text="Componente AlisterMM secundario",
+            alignment="left",
+            color="warning",
+            bottomMargin=false,
+            variant="h3",
+        />
+    );
+}
+
