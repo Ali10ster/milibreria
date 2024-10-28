@@ -1,9 +1,9 @@
 import React from "react";
-import AlisterMMRating, { AlisterMMProp } from "../alistermm";
+import AlisterMMRating, { AlisterMM } from "../alistermm";
 
-export default function Example(props: AlisterMMProp) {
+export default function Example(props: AlisterMM) {
     return (
-        <AlisterMMRating
+        <AlisterMM
             ratingValue={props.ratingValue}
             onRatingChange={props.onRatingChange}
         />
