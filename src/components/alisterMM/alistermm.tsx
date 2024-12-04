@@ -1,29 +1,22 @@
-//Alister Alberto Martin Miranda
-import Typography from '@mui/material/Typography';
+import Rating from '@mui/material/Rating';
 
-export interface AlisterMMProps{
-    text: string; //texto
-    alignment: "center"| "inherit" | "justify" | "left" | "right"; //Alineacion del componente
-    color: "primary" | "secondary" | "success" | "error" | "info" | "error" | "info" | "warning" | "textPrimary" | "textSecondary" | "textDisabled"; //Color del texto
-    bottomMargin?: boolean; //Subrayado
-    variant: "body1" | "body2" | "button" | "caption" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "inherit" | "overline" | "subtitle1" | "subtitle2"; //Tipo del texto
+export interface AlisterMMProps {
+    ratingValue: number;
+    onRatingChange?: (newRating: number) => void;
 }
 
-//Definicion del componente
- function AlisterMM(props: AlisterMMProps){
-    //Paso el valor de las props
-    const {text, alignment, color, bottomMargin, variant} = props
-    return(
-        //Personalizo el componente
-        <Typography 
-        align={alignment}
-        color={color}
-        gutterBottom={bottomMargin}
-        variant={variant}
-        >
-        {text}
-        </Typography>
-    )
+function AlisterMM({ ratingValue, onRatingChange }: AlisterMMProps) {
+    return (
+        <Rating
+            data-testid="rating-component"
+            value={ratingValue}
+            onChange={(event, newValue) => {
+                if (newValue !== null && onRatingChange) {
+                    onRatingChange(newValue);
+                }
+            }}
+        />
+    );
 }
 
 export default AlisterMM;

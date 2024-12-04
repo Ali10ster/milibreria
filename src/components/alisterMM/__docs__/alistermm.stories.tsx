@@ -11,20 +11,14 @@ type Story = StoryObj<typeof Example>;
 
 export const Primary: Story = {
     args: {
-        text: "Componente AlisterMM primario",
-        alignment: "center",
-        color: "success",
-        bottomMargin: true,
-        variant: "h1",
+        ratingValue: 4, // Valor inicial del rating
+        onRatingChange: (newRating: number) => console.log("Nuevo rating:", newRating),
     },
 };
 
 export const Secondary: Story = {
     args: {
-        text: "Componente AlisterMM secundario",
-        alignment: "right",
-        color: "warning",
-        bottomMargin: false,
-        variant: "caption",
+        ratingValue: 2, // Valor inicial del rating
+        onRatingChange: (newRating: number) => console.log("Nuevo rating secundario:", newRating),
     },
 };

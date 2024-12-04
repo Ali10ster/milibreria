@@ -1,13 +1,12 @@
 import React from "react";
-import AlisterMM, { AlisterMMProps } from "../alistermm";
-export default function Example(props: AlisterMMProps){
-        return(
-                <AlisterMM
-                        text={props.text}
-                        alignment={props.alignment}
-                        color={props.color}
-                        bottomMargin={props.bottomMargin}
-                        variant={props.variant}
-                />
-        )
+import AlisterMMRating, { AlisterMMRatingProps } from "../alistermm";
+
+export default function Example(props: AlisterMMRatingProps) {
+    return (
+        <AlisterMMRating
+            ratingValue={props.ratingValue}
+            onRatingChange={props.onRatingChange}
+        />
+    );
 }
+
