@@ -10,7 +10,7 @@ function AlisterMM({ ratingValue, onRatingChange }: AlisterMMProps) {
         <Rating
             data-testid="rating-component"
             value={ratingValue}
-            onChange={(event, newValue) => {
+            onChange={(_event, newValue) => {
                 if (newValue !== null && onRatingChange) {
                     onRatingChange(newValue);
                 }

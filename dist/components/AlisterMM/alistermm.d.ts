@@ -1,9 +1,6 @@
 export interface AlisterMMProps {
-    text: string;
-    alignment: "center" | "inherit" | "justify" | "left" | "right";
-    color: "primary" | "secondary" | "success" | "error" | "info" | "error" | "info" | "warning" | "textPrimary" | "textSecondary" | "textDisabled";
-    bottomMargin?: boolean;
-    variant: "body1" | "body2" | "button" | "caption" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "inherit" | "overline" | "subtitle1" | "subtitle2";
+    ratingValue: number;
+    onRatingChange?: (newRating: number) => void;
 }
-declare function AlisterMM(props: AlisterMMProps): import("react/jsx-runtime").JSX.Element;
+declare function AlisterMM({ ratingValue, onRatingChange }: AlisterMMProps): import("react/jsx-runtime").JSX.Element;
 export default AlisterMM;
